@@ -1,0 +1,52 @@
+@import "../less/common";
+.toast-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  .size(100%, 100%);
+  background: rgba(0, 0, 0, 0.7);
+  .toast-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .size(auto, auto);
+    background: #fff;
+    padding-bottom: 20px;
+  }
+  .hd {
+    height: 30px;
+    .clearfix();
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .close {
+    padding: 0;
+    .size(30px, 30px);
+    float: right;
+    border-radius: 50%;
+    border: none;
+    transform: rotate(45deg);
+    font-size: 30px;
+  }
+  .bd {
+    padding: 30px;
+    font-weight: normal;
+    text-align: center;
+  }
+  .ft {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .btn {
+    .size(90px, 40px);
+
+  }
+  .cancel {
+    margin-right: 10px;
+  }
+  .sure {
+    margin-left: 10px;
+  }
+}
