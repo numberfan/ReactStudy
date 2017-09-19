@@ -1,14 +1,24 @@
 import React from 'react'
 
-export default class Text extends React.Component {
+function UserInfo(props) {
+  return (
+      <div>
+        {props.children}
+      </div>
+  )
+}
 
-  handleClick () {
-    console.log('您点击了按钮')
+export default class Text extends React.Component {
+  constructor (props) {
+    super(props)
+
   }
 
   render () {
     return (
-        <button onClick={this.handleClick}>点击</button>
+        <UserInfo>
+          <h1>{this.props.name}</h1>
+        </UserInfo>
     )
   }
 }

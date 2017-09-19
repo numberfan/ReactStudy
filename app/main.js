@@ -6,24 +6,18 @@ import ReactDOM from 'react-dom'
 
 import Clock from './clock/clock'
 import Toggle from './toggle/toggle'
-import Toast from './toast/toast'
+import FormTest from './form/formTest'
+
+import Test from './test'
 
 let box = document.querySelector('#app')
 
-// clock
 ReactDOM.render(
-    <Clock username="shirychen"/>,
-    box
-)
-
-// toggle
-ReactDOM.render(
-    <Toggle/>,
-    box
-)
-
-// toast
-ReactDOM.render(
-    <Toast/>,
+    <div>
+      <Clock username="shirychen"/> {/*clock*/}
+      <Toggle/> {/*toggle*/}
+      <FormTest/> {/*form*/}
+      <Test name="2333"/>
+    </div>,
     box
 )

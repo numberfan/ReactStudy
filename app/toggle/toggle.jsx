@@ -1,14 +1,15 @@
 import React from 'react'
 import './toggle.less'
+import Toast from '../toast/toast'
 
-export default class Text extends React.Component {
+export default class Toggle extends React.Component {
 
   constructor (props) {
     super(props)
 
     this.state = {
       text: '显示框',
-      show: false
+      showToast: false
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -16,20 +17,17 @@ export default class Text extends React.Component {
 
   handleClick () {
     this.setState(prevState => ({
-          show: !prevState.show,
+          showToast: !prevState.showToast,
           text: this.state.show ? '显示框' : '隐藏框'
         })
     )
   }
 
   render () {
-    let boxStyle = {
-      display: this.state.show ? 'block' : 'none'
-    }
     return (
         <div className="box">
           <button onClick={this.handleClick}>{this.state.text}</button>
-          <div className="toggle-panel" style={boxStyle}></div>
+          <Toast show={this.state.showToast} onChangeShow={this.handleClick}/>
         </div>
     )
   }

@@ -7,24 +7,27 @@ export default class Toast extends React.Component {
     super()
 
     this.state = {
-      show: true,
+      showToast: false,
       display: 'block'
     }
 
     this.closeBox = this.closeBox.bind(this)
   }
 
-  closeBox (e) {
-    console.log(e)
-    this.setState((prevState) => ({
-      show: !prevState.show
-    }))
+  componentDidMount () {
+  }
+
+  closeBox () {
+    this.props.onChangeShow()
   }
 
   render () {
+
+    let showDom = this.props.show === true ? true : false
     let style = {
-      display: this.state.show ? 'block' : 'none'
+      display: this.state.showToast || showDom ? 'block' : 'none'
     }
+
     return (
         <div className="toast-box" style={style}>
           <div className="toast-con">
