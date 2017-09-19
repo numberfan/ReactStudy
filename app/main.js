@@ -9,8 +9,6 @@ import Toggle from './toggle/toggle'
 import FormTest from './form/formTest'
 import DataTable from './dataTable/dataTable'
 
-// import Test from './test'
-
 let box = document.querySelector('#app')
 
 ReactDOM.render(
@@ -19,7 +17,6 @@ ReactDOM.render(
       <Toggle/> {/*toggle*/}
       <FormTest/> {/*form*/}
       <DataTable/> {/*dataTable*/}
-      {/*<Test name="2333"/>*/}
     </div>,
     box
 )
